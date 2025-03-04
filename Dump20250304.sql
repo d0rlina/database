@@ -99,29 +99,6 @@ INSERT INTO `orderdetails` VALUES (1,1,1,2,900.00),(2,1,4,2,100.00),(3,2,2,1,550
 /*!40000 ALTER TABLE `orderdetails` ENABLE KEYS */;
 UNLOCK TABLES;
 
---
--- Table structure for table `orders`
---
-
-DROP TABLE IF EXISTS `orders`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `orders` (
-  `OrderID` int NOT NULL AUTO_INCREMENT,
-  `ClientID` int DEFAULT NULL,
-  `OrderDate` datetime DEFAULT CURRENT_TIMESTAMP,
-  `TotalPrice` decimal(10,2) DEFAULT NULL,
-  `Status` tinyint(1) DEFAULT '0',
-  PRIMARY KEY (`OrderID`),
-  KEY `ClientID` (`ClientID`),
-  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`ClientID`) REFERENCES `clients` (`ClientID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `orders`
---
-
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
 INSERT INTO `orders` VALUES (1,1,'2024-12-16 20:02:25',2000.00,1),(2,2,'2024-12-16 20:02:25',1550.00,0),(3,3,'2024-12-16 20:02:25',1850.00,1);
