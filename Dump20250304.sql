@@ -22,7 +22,7 @@
 DROP TABLE IF EXISTS `clients`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `clients` (
+CREATE TABLE `polzovatel` (
   `ClientID` int NOT NULL AUTO_INCREMENT,
   `Name` varchar(100) NOT NULL,
   `PhoneNumber` varchar(15) DEFAULT NULL,
@@ -48,7 +48,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `dishes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `dishes` (
+CREATE TABLE `eda` (
   `DishID` int NOT NULL AUTO_INCREMENT,
   `Name` varchar(100) NOT NULL,
   `Price` decimal(10,2) NOT NULL,
@@ -75,7 +75,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `orderdetails`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `orderdetails` (
+CREATE TABLE `zakazik` (
   `OrderDetailID` int NOT NULL AUTO_INCREMENT,
   `OrderID` int DEFAULT NULL,
   `DishID` int DEFAULT NULL,
