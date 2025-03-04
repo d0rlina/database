@@ -19,7 +19,7 @@
 -- Table structure for table `clients`
 --
 
-DROP TABLE IF EXISTS `clients`;
+DROP TABLE IF EXISTS `NECLIENT`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `polzovatel` (
@@ -50,7 +50,7 @@ DROP TABLE IF EXISTS `dishes`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `eda` (
   `DishID` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(100) NOT NULL,
+  `Name` varchar(50) NOT NULL,
   `Price` decimal(10,2) NOT NULL,
   `Category` varchar(50) DEFAULT NULL,
   `IsAvailable` tinyint(1) DEFAULT '1',
@@ -80,7 +80,7 @@ CREATE TABLE `zakazik` (
   `OrderID` int DEFAULT NULL,
   `DishID` int DEFAULT NULL,
   `Quantity` int NOT NULL,
-  `Price` decimal(10,2) NOT NULL,
+  `Price` decimal(0) NOT NULL,
   PRIMARY KEY (`OrderDetailID`),
   KEY `OrderID` (`OrderID`),
   KEY `DishID` (`DishID`),
