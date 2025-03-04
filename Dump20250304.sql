@@ -19,7 +19,7 @@
 -- Table structure for table `clients`
 --
 
-DROP TABLE IF EXISTS `clients`;
+DROP TABLE IF EXISTS `NECLIENT`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `clients` (
